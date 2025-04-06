@@ -12,7 +12,7 @@ export default function Message() {
       const mail = storedUser.email;
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/message/get/${mail}`);
+        const response = await axios.get(`https://evolve-6rfd.onrender.com/api/message/get/${mail}`);
         setData(response.data);
       } catch (e) {
         console.log("Error fetching messages:", e);
@@ -27,7 +27,7 @@ export default function Message() {
   const seen = async (event) => {
     const id = event.currentTarget.id;
     try {
-      await axios.patch(`http://localhost:5000/api/message/${id}`, { read: true });
+      await axios.patch(`https://evolve-6rfd.onrender.com/api/message/${id}`, { read: true });
 
       // Remove the read message from UI
       setData((prevData) => prevData.filter((msg) => msg._id !== id));

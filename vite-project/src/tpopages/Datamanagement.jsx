@@ -12,7 +12,7 @@ export default function Datamanagement() {
   const user = JSON.parse(localStorage.getItem("user"));
   const openstud = async (e)=> {
    try{ settp(1)
-    const res=await axios.get(`http://localhost:5000/api/tpo/getdata/student/${e}`);
+    const res=await axios.get(`https://evolve-6rfd.onrender.com/api/tpo/getdata/student/${e}`);
     setdata1(res.data);}
     catch(err){
       console.log(err);
@@ -23,7 +23,7 @@ export default function Datamanagement() {
   }
   const gotoprofile = async (e)=>{
     try{      
-      const res=await axios.get(`http://localhost:5000/api/tpo/getdata/student/profile/${e}`);
+      const res=await axios.get(`https://evolve-6rfd.onrender.com/api/tpo/getdata/student/profile/${e}`);
       setdata2(res.data);
       settp(2)
     }
@@ -38,7 +38,7 @@ export default function Datamanagement() {
     const getdata = async ()=>{
       try{
         const mail = JSON.parse(localStorage.getItem("user"));
-      const response = await axios.get(`http://localhost:5000/api/tpo/getdata/${mail.email}`);
+      const response = await axios.get(`https://evolve-6rfd.onrender.com/api/tpo/getdata/${mail.email}`);
         console.log(response.data);
         
         setdata(response.data);

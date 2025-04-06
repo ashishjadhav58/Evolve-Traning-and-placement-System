@@ -14,7 +14,7 @@ export default function MessageInterface() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/message/get/perticular/${end1}/${end2}`);
+        const response = await axios.get(`https://evolve-6rfd.onrender.com/api/message/get/perticular/${end1}/${end2}`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching messages:", error);
@@ -30,7 +30,7 @@ export default function MessageInterface() {
     if (message.trim() === "") return;
 
     try {
-      await axios.post("http://localhost:5000/api/message", {
+      await axios.post("https://evolve-6rfd.onrender.com/api/message", {
         sender: end1,
         receiver: end2,
         msg: message

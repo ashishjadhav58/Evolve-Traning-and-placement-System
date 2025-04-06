@@ -12,7 +12,7 @@ export default function CTAttendence() {
     }
 
     try {
-      const res = await axios.get('http://localhost:5000/api/attendance/all');
+      const res = await axios.get('https://evolve-6rfd.onrender.com/api/attendance/all');
       const formattedDate = new Date(date).toISOString().split("T")[0];
       const filtered = res.data.filter((record) => {
         const recordDate = new Date(record.markedAt).toISOString().split("T")[0];

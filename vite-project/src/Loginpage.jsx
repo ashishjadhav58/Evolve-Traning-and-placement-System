@@ -9,7 +9,7 @@ export default function Loginpage() {
   useEffect(()=>{
     const getdata = async ()=>{
       try{
-        const response = await axios.get("http://localhost:5000/api/login");
+        const response = await axios.get("https://evolve-6rfd.onrender.com/api/login");
         console.log(response.data);
         
         setdatadb(response.data)   

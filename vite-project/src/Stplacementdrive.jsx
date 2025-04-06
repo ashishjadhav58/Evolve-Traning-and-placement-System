@@ -7,7 +7,7 @@ export default function Stplacementdrive() {
   useEffect(() => {
     const fetchDrives = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/drivedata");
+        const response = await axios.get("https://evolve-6rfd.onrender.com/api/drivedata");
         setData(response.data);
       } catch (err) {
         console.log(err);

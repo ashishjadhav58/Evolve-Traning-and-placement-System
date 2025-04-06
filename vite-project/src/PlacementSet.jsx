@@ -18,7 +18,7 @@ export default function PlacementSet() {
   useEffect(() => {
     const fetchDrives = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/drivedata");
+        const response = await axios.get("https://evolve-6rfd.onrender.com/api/drivedata");
         setData(response.data);
       } catch (err) {
         console.log(err);
@@ -34,7 +34,7 @@ export default function PlacementSet() {
 
   const addDrive = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/drivedata", newDrive);
+      const res = await axios.post("https://evolve-6rfd.onrender.com/api/drivedata", newDrive);
       setData(prev => [...prev, res.data]);
       setNewDrive({
         companyName: '',
@@ -71,7 +71,7 @@ export default function PlacementSet() {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/drivedata/${editableData._id}`, editableData);
+      await axios.put(`https://evolve-6rfd.onrender.com/api/drivedata/${editableData._id}`, editableData);
       const updatedList = data.map(d =>
         d._id === editableData._id ? editableData : d
       );

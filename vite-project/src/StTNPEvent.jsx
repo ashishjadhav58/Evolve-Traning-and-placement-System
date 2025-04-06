@@ -6,7 +6,7 @@ export default function StTNPEvent() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/tpoevents");
+        const res = await axios.get("https://evolve-6rfd.onrender.com/api/tpoevents");
         setEvents(res.data);
       } catch (err) {
         console.error("Error fetching events:", err);

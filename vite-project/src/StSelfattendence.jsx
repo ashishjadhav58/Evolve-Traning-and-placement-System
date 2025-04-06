@@ -10,7 +10,7 @@ export default function StSelfattendence() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/tpoevents")
+    axios.get("https://evolve-6rfd.onrender.com/api/tpoevents")
       .then(res => {
         const today = new Date().toISOString().slice(0, 10); // "YYYY-MM-DD"
         const filteredEvents = res.data.filter(event => {
@@ -43,7 +43,7 @@ export default function StSelfattendence() {
       markedAt: new Date().toISOString(),
     };
 
-    axios.post("http://localhost:5000/api/attendance", attendanceData)
+    axios.post("https://evolve-6rfd.onrender.com/api/attendance", attendanceData)
       .then(() => {
         alert("Attendance marked successfully!");
         setShowModal(false);

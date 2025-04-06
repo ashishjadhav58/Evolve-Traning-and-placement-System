@@ -7,7 +7,7 @@ export default function StTNPResouces() {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/resouces");
+        const res = await axios.get("https://evolve-6rfd.onrender.com/api/resouces");
         setResources(res.data);
       } catch (err) {
         console.error("Error fetching resources:", err);

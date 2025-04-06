@@ -16,7 +16,7 @@ export default function Register() {
     const senddata = async (event) => {
       event.preventDefault();  
       try {
-      const response = await axios.post("http://localhost:5000/api/register",data,{
+      const response = await axios.post("https://evolve-6rfd.onrender.com/api/register",data,{
         headers: { 'Content-Type': 'application/json' }       
       })
       console.log(response.data);

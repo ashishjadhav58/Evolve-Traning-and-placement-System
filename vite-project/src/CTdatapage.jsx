@@ -11,7 +11,7 @@ export default function CTdatapage() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/classteacher/getdata/students/${user.email}`);
+        const res = await axios.get(`https://evolve-6rfd.onrender.com/api/classteacher/getdata/students/${user.email}`);
         setStudents(res.data);
       } catch (err) {
         console.log(err);
@@ -23,7 +23,7 @@ export default function CTdatapage() {
 
   const handleViewProfile = async (email) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/classteacher/getdata/student/profile/${email}`);
+      const res = await axios.get(`https://evolve-6rfd.onrender.com/api/classteacher/getdata/student/profile/${email}`);
       setSelectedStudent(res.data[0]);
       setView("profile");
     } catch (err) {

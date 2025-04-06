@@ -16,7 +16,7 @@ export default function Tpresouce() {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/resouces");
+        const res = await axios.get("https://evolve-6rfd.onrender.com/api/resouces");
         setResources(res.data);
       } catch (err) {
         console.error(err);
@@ -36,7 +36,7 @@ export default function Tpresouce() {
 
   const addResource = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/resouces", newResource);
+      const res = await axios.post("https://evolve-6rfd.onrender.com/api/resouces", newResource);
       setResources(prev => [...prev, res.data]);
       setNewResource({
         resourceName: '',
@@ -61,7 +61,7 @@ export default function Tpresouce() {
 
   const saveEdit = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/resouces/${editingResource._id}`, editingResource);
+      await axios.put(`https://evolve-6rfd.onrender.com/api/resouces/${editingResource._id}`, editingResource);
       setResources(prev =>
         prev.map(r => (r._id === editingResource._id ? editingResource : r))
       );

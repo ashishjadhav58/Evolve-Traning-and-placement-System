@@ -16,7 +16,7 @@ export default function TpoEvent() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/tpoevents");
+        const res = await axios.get("https://evolve-6rfd.onrender.com/api/tpoevents");
         setEvents(res.data);
       } catch (err) {
         console.error("Error fetching events:", err);
@@ -36,7 +36,7 @@ export default function TpoEvent() {
 
   const addEvent = async () => {
     try {
-      const res = await axios.post("http://localhost:5000/api/tpoevents", newEvent);
+      const res = await axios.post("https://evolve-6rfd.onrender.com/api/tpoevents", newEvent);
       setEvents(prev => [...prev, res.data]);
       setNewEvent({
         lecturer: '',
@@ -53,7 +53,7 @@ export default function TpoEvent() {
 
   const updateEvent = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/tpoevents/${editingEvent._id}`, editingEvent);
+      await axios.put(`https://evolve-6rfd.onrender.com/api/tpoevents/${editingEvent._id}`, editingEvent);
       setEvents(prev => prev.map(ev => ev._id === editingEvent._id ? editingEvent : ev));
       setEditingEvent(null);
     } catch (err) {

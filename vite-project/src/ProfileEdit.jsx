@@ -20,7 +20,7 @@ export default function ProfileEdit() {
         if(patch.confirm === storedUser.password){
             console.log(true);
             try{
-                const response = await axios.patch(`http://localhost:5000/api/accounts/${storedUser._id}`, patch, {
+                const response = await axios.patch(`https://evolve-6rfd.onrender.com/api/accounts/${storedUser._id}`, patch, {
                     headers: { 'Content-Type': 'application/json' }
                 })
                 console.log(response);
