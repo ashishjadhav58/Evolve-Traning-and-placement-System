@@ -1,0 +1,39 @@
+{
+  "accounts": [
+    {
+      "id": "d9db",
+      "username": "ashish",
+      "Email": "ashishjadhav9579@gmail.com",
+      "accesstype": "Student",
+      "tpoid": "1234",
+      "classtid": "1234",
+      "password": "1234",
+      "confirm": "1234"
+    },
+    {
+      "id": "e2d1",
+      "username": "varad",
+      "Email": "ashishjadhav9579@gmail.com",
+      "accesstype": "Training and placement officer",
+      "password": "1234"
+    },
+    {
+      "id": "d07d",
+      "username": "sumeet",
+      "Email": "ashishjadhav9579@gmail.com",
+      "accesstype": "Student",
+      "tpoid": "1234",
+      "classtid": "1234",
+      "password": "1234"
+    },
+    {
+      "id": "d5e6",
+      "username": "abhijeet jadhav",
+      "Email": "ashishjadhav9579@gmail.com",
+      "accesstype": "Student",
+      "tpoid": "1234",
+      "classtid": "1234",
+      "password": "1234"
+    }
+  ]
+}
