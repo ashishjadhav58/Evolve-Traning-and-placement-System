@@ -26,10 +26,11 @@ app.use(cors({
 
 // Middlewares
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: ['http://localhost:5173', 'https://evolve-traning-and-placement-system.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
 app.use(express.json()); 
 
 // POST: User Registration
