@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch((error) => console.log("Error occurred:", error));
 
 app.use(cors({
-    origin: process.env.CLIENT_URL, 
+    origin: "*", 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
